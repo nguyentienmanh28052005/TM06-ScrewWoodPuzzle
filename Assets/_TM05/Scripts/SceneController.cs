@@ -33,7 +33,7 @@ public class SceneController : Singleton<SceneController>
         //StartCoroutine(LoadYourAsync("MainMenu"));
         
         Debug.Log("Enter the sceneController");
-        LoadScene("StartScene", false, false);
+        LoadScene("GameMenu", false, false);
     }
 
     private void DoLoadingBar(float loadTime, UnityEngine.Events.UnityAction onLoadCompleted)

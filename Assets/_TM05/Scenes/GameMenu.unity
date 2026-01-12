@@ -454,7 +454,7 @@ MonoBehaviour:
   m_BlockingObjects: 0
   m_BlockingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 119
 --- !u!114 &266150481
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -890,7 +890,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 375537039717404821, guid: 4cc22348184ea8148bca7ec562ef32d5, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 6.9179688
+      value: 19.5
       objectReference: {fileID: 0}
     - target: {fileID: 1169998995769602952, guid: 4cc22348184ea8148bca7ec562ef32d5, type: 3}
       propertyPath: m_Name

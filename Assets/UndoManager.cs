@@ -7,6 +7,8 @@ public interface ICommand
     void Undo();
 }
 
+
+
 [System.Serializable]
 public struct WoodState
 {
@@ -110,12 +112,6 @@ public class UndoManager : MonoBehaviour
         Instance = this;
     }
 
-    public void RecordMove(Screw screw, ScrewNut oldNut, ScrewNut newNut)
-    {
-        ICommand cmd = new MoveScrewCommand(screw, oldNut, newNut);
-        _history.Push(cmd);
-    }
-
     public void Undo()
     {
         if (GameManager.Instance.busy) return;
@@ -127,7 +123,15 @@ public class UndoManager : MonoBehaviour
         }
         else
         {
-            Debug.Log("Hết lượt Undo!");
+            Debug.Log("Hết lượt!");
         }
     }
+    
+    public void RecordMove(Screw screw, ScrewNut oldNut, ScrewNut newNut)
+    {
+        ICommand cmd = new MoveScrewCommand(screw, oldNut, newNut);
+        _history.Push(cmd);
+    }
+
+    
 }
